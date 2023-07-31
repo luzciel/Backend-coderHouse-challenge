@@ -97,7 +97,7 @@ const ejecutar = async () => {
     await product.createFile();
 
     //Guardar producto
-     id = await product.save(producto1);
+    const id = await product.save(producto1);
     const id2 = await product.save(producto1);
     console.log("Producto creado con ID:", id);
     console.log("Producto creado con ID:", id2);
@@ -119,5 +119,7 @@ const ejecutar = async () => {
     console.log("Se elimina todos los objetos presentes en el archivo, ahora el archivo solo contienen:", await product.getAll());
 }
 
-ejecutar().catch((error) => console.error(error));
+//ejecutar().catch((error) => console.error(error));
+
+module.exports = Contenedor
 
