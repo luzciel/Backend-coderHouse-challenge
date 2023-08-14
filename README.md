@@ -54,3 +54,14 @@ Realizar un proyecto de servidor basado en node.js que utilice el módulo expres
 - Incluir un archivo de texto 'productos.txt' y utilizar la clase Contenedor del desafío anterior para acceder a los datos persistidos del servidor.
 
 - Antes de iniciar el servidor, colocar en el archivo 'productos.txt' tres productos como en el ejemplo del desafío anterior.
+
+## Consigna desafio 4
+
+Configurar un proyecto para que trabaje con Handlebars y websocket.
+### Aspectos a incluir
+- Configurar el servidor para integrar el motor de plantillas Handlebars e instalar un servidor de socket.io al mismo.
+- Crear una vista “home.handlebars” la cual la cual vivirá en el endpoint “/” en nuestro views router, ésta contendrá una lista de productos, ésta trabajará con websockets.
+- Al trabajar con websockets, cada vez que creemos un producto nuevo, o bien cada vez que eliminemos un producto, se debe actualizar automáticamente en dicha vista la lista.
+- Ya que la conexión entre una consulta HTTP y websocket no está contemplada dentro de la clase. Se recomienda que, para la creación y eliminación de un producto, Se cree un formulario simple en la vista  realTimeProducts.handlebars. Para que el contenido se envíe desde websockets y no HTTP.
+
+
