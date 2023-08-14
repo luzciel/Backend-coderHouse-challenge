@@ -24,9 +24,9 @@ let products = []
 io.on("connection", (socket) => {
     console.log("Un usuario se ha conectado");
 
-    socket.on("chatMessage", (message, id) => {
-        products = [...products, {id, message}];
-        io.emit("message", {message, id})
+    socket.on("chatMessage", (message, id, price) => {
+        products = [...products, {id, message, price}];
+        io.emit("message", {message, id, price})
     })
 
 
